@@ -1,4 +1,4 @@
 import Decimal from 'decimal.js';
 import {applyDecimalFunction} from "../util";
 
-export const sqrt = (n: Decimal.Value | Array<Decimal.Value>): Decimal | Array<Decimal> => applyDecimalFunction(n, Decimal.sqrt);
+export const sqrt = (n: Decimal.Value | Decimal.Value[]): Decimal | Decimal[] => applyDecimalFunction(n, Decimal.sqrt);

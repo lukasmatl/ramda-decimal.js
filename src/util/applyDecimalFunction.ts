@@ -1,10 +1,10 @@
 import Decimal from "decimal.js";
-import {map, ifElse, Arity1Fn} from 'ramda';
+import {map, ifElse} from 'ramda';
 
 
 export const applyDecimalFunction = (
-    param: Decimal.Value | Array<Decimal.Value>,
-    func: Arity1Fn) => ifElse(
+    param: Decimal.Value | Decimal.Value[],
+    func:  (a: any) => any) => ifElse(
     Array.isArray,
     map(func),
     func

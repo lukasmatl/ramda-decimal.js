@@ -10,7 +10,6 @@
   "compilerOptions": {
     /** COMPILER OPTIONS **/
     /* Basic Options */
-    "isolatedModules": true,
     "lib": [
       "es6",
       "dom",
@@ -23,28 +22,21 @@
       "esnext"
     ],
     "declaration": true,
-    "outDir": "./lib",
-    "module": "commonjs",
-    "target": "es5",
-    "allowJs": false,
-    /**/
-    /* Strict Checks */
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "lib",
     "strict": true,
-    /**/
-    /* Module Resolution */
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    /**/
-    /* Linter Checks */
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    /**/
-    /* Advanced*/
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true
-  },
-  "noPropertyAccessFromIndexSignature": true
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "paths": {
+      "*": ["*", "./typings/*"]
+    }
+  }
 }

@@ -1,4 +1,4 @@
 import Decimal from 'decimal.js';
 import {applyDecimalFunction} from "../util";
 
-export const tan = (n: Decimal.Value | Array<Decimal.Value>): Decimal | Array<Decimal> => applyDecimalFunction(n, Decimal.tan);
+export const tan = (n: Decimal.Value | Decimal.Value[]): Decimal | Decimal[] => applyDecimalFunction(n, Decimal.tan);
