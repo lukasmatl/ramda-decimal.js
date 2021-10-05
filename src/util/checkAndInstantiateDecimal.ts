@@ -1,6 +1,6 @@
 import Decimal from "decimal.js";
 
-export const checkAndInstantiateDecimal = (n: Decimal | number | string) => {
+export const checkAndInstantiateDecimal = (n: any): Decimal => {
     if (Decimal.isDecimal(n)) {
         return n;
     } else {

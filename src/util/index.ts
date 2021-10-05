@@ -9,3 +9,5 @@ export * from './random';
 export * from './sign';
 export * from './trunc';
 export * from './valueOf';
+export * from './compare';
+export * from './sort';
