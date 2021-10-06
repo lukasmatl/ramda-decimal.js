@@ -30,3 +30,8 @@ export * from './tan';
 export * from './tanh';
 export * from './lowest';
 export * from './highest';
+export * from './sum';
+export * from './rangeMaxValue';
+export * from './rangeMinValue';
+export * from './rangeMaxIndexOf';
+export * from './rangeMinIndexOf';
