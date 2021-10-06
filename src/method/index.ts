@@ -28,3 +28,5 @@ export * from './sqrt';
 export * from './sub';
 export * from './tan';
 export * from './tanh';
+export * from './lowest';
+export * from './highest';
