@@ -1,15 +1,19 @@
 import Decimal from 'decimal.js';
-import {slice, compose, map} from 'ramda'
+import {slice, compose, map, curry} from 'ramda'
 import {checkAndInstantiateDecimal} from "../util";
 
-
-export const highest = (n: Decimal.Value[], length: number): Decimal | null => {
-    if (n.length < length || !length) return null;
+/**
+ * Function that finds the highest number of the last values of array defined by param length
+ * @param length
+ * @param array
+ */
+export const highest = curry((length: number, array: Decimal.Value[]): Decimal | null => {
+    if (array.length < length || !length) return null;
 
     const subArray = compose(
         map(checkAndInstantiateDecimal),
-        slice(n.length-1-length, n.length-1)
-    )(n);
+        slice(array.length-1-length, array.length-1)
+    )(array);
 
     return Decimal.max(subArray);
-}
+});

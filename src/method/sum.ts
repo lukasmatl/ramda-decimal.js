@@ -1,11 +1,12 @@
 import Decimal from 'decimal.js';
-import {isNil, isEmpty, map} from 'ramda'
-import {checkAndInstantiateDecimal} from "../util";
+import {isNil, isEmpty} from 'ramda'
 
-
+/**
+ * Function to call Decimal.sum method on one or array of decimals
+ * @param n
+ */
 export const sum = (n: Decimal.Value[]): Decimal | null => {
     if (isNil(n) || isEmpty(n)) return null;
 
-    const array: Decimal[] = map(checkAndInstantiateDecimal, n);
-    return Decimal.sum(...array);
+    return Decimal.sum(...n);
 }

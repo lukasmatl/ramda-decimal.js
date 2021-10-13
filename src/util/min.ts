@@ -1,8 +1,11 @@
 import Decimal from 'decimal.js';
 import {flatten} from 'ramda';
 
-
-export const min = (...n: Decimal.Value[]): Decimal => {
-    const array= flatten(n);
+/**
+ * Function accepts multiple of arrays of decimals, flattens them and select min value
+ * @param arrays
+ */
+export const min = (...arrays: Decimal.Value[]): Decimal => {
+    const array = flatten(arrays);
     return Decimal.min(...array);
 };

@@ -1,5 +1,8 @@
 import Decimal from 'decimal.js';
-import {applyDecimalFunction} from "./applyDecimalFunction";
+import {applyDecimalFunction} from './applyDecimalFunction';
 
-
-export const isDecimal = (n: Decimal.Value | Decimal.Value[]): boolean | Array<boolean> => applyDecimalFunction(n, Decimal.isDecimal);
+/**
+ * Function to check if the value is decimal accept array or single value
+ * @param n
+ */
+export const isDecimal = (n: Decimal.Value | Decimal.Value[]): boolean | boolean[] => applyDecimalFunction(n, Decimal.isDecimal);

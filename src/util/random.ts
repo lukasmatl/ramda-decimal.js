@@ -1,5 +1,9 @@
 import Decimal from 'decimal.js';
-import {times} from 'ramda';
+import {times, curry} from 'ramda';
 
-
-export const random = (x: number| undefined, count: number): Array<Decimal> => times(() => Decimal.random(x), count);
+/**
+ * Function to call Decimal.random method to create array of decimals
+ * @param x
+ * @param count
+ */
+export const random = curry((x: number, count: number): Decimal[] => times(() => Decimal.random(x), count));

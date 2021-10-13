@@ -2,13 +2,20 @@ import Decimal from "decimal.js";
 import {compose, isEmpty, isNil, map, slice} from "ramda";
 import {checkAndInstantiateDecimal} from "../util";
 
-export const rangeMinValue  = (n: Decimal.Value[], fromIndex: number, toIndex: number): Decimal | null => {
-    if (isNil(n) || isEmpty(n) || isNaN(fromIndex) || isNaN(toIndex)) return null;
+/**
+ * Function that finds the min value within defined range in array.
+ * @param fromIndex
+ * @param toIndex
+ * @param getLast
+ * @param array
+ */
+export const rangeMinValue  = (fromIndex: number, toIndex: number, array: Decimal.Value[]): Decimal | null => {
+    if (isNil(array) || isEmpty(array) || isNaN(fromIndex) || isNaN(toIndex)) return null;
 
-    const array: Decimal[] = compose(
+    const subArray: Decimal[] = compose(
         map(checkAndInstantiateDecimal),
         slice(fromIndex, toIndex)
-    )(n);
+    )(array);
 
-    return Decimal.min(...array);
+    return Decimal.min(...subArray);
 }

@@ -1,9 +1,12 @@
 import Decimal from 'decimal.js';
 import {ifElse, map} from "ramda";
 
-
-export const valueOf = (n: Decimal | Decimal[]): string | Array<string> => ifElse(
+/**
+ * Function to call valueOf method on one or array of decimals
+ * @param array
+ */
+export const valueOf = (array: Decimal | Decimal[]): string | string[] => ifElse(
     Array.isArray,
     map((value: Decimal) => value.valueOf()),
-    () => n.valueOf()
-)(n);
+    () => array.valueOf()
+)(array);
