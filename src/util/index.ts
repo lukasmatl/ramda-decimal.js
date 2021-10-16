@@ -11,3 +11,4 @@ export * from './trunc';
 export * from './valueOf';
 export * from './compare';
 export * from './sort';
+export * from './completeArray';

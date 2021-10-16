@@ -35,3 +35,5 @@ export * from './rangeMaxValue';
 export * from './rangeMinValue';
 export * from './rangeMaxIndexOf';
 export * from './rangeMinIndexOf';
+export * from './crossover';
+export * from './crossunder';
