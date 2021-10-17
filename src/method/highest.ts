@@ -10,10 +10,10 @@ import {checkAndInstantiateDecimal} from "../util";
 export const highest = curry((length: number, array: Decimal.Value[]): Decimal | null => {
     if (array.length < length || !length) return null;
 
-    const subArray = compose(
+    const subArray: Decimal[] = compose(
         map(checkAndInstantiateDecimal),
         slice(array.length-1-length, array.length-1)
     )(array);
 
-    return Decimal.max(subArray);
+    return Decimal.max(...subArray);
 });

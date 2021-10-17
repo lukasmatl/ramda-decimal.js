@@ -6,4 +6,4 @@ import {curry} from 'ramda';
  * @param x
  * @param y
  */
-export const clamp = curry((n:Decimal.Value, min: Decimal.Value, max: Decimal.Value): Decimal => Decimal.clamp(n, min, max));
+export const clamp = curry((min: Decimal.Value, max: Decimal.Value, n:Decimal.Value,): Decimal => Decimal.clamp(n, min, max));

@@ -5,4 +5,4 @@ import {applyDecimalFunction} from "../util";
  * Function to call Decimal.sqrt method on one or array of decimals
  * @param n
  */
-export const sqrt = (n: Decimal.Value | Decimal.Value[]): Decimal | Decimal[] => applyDecimalFunction(n, Decimal.sqrt);
+export const sqrt = (n: Decimal.Value | Decimal.Value[]): Decimal | Decimal[] => applyDecimalFunction(n, (x: Decimal.Value) => Decimal.sqrt(x));
