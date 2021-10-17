@@ -1,4 +1,4 @@
-import Decimal from "decimal.js";
+import Decimal from 'decimal.js';
 import {curry} from 'ramda';
 /**
  * Curried function to call atan2 on two values.

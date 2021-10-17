@@ -1,4 +1,4 @@
-import Decimal from "decimal.js";
+import Decimal from 'decimal.js';
 
 /**
  * Function to check if it's decimal it returns the parameter

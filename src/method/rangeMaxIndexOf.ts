@@ -15,9 +15,10 @@ export const rangeMaxIndexOf  = curry((fromIndex: number, toIndex: number, getLa
 
     let maxIndex: number  = fromIndex;
     let maxValue: Decimal = checkAndInstantiateDecimal(array[fromIndex]);
+
     for (let i=fromIndex+1; i<=toIndex; i++) {
         const valueToCheck: Decimal = checkAndInstantiateDecimal(array[i]);
-        if (getLast? maxValue.gte(valueToCheck): maxValue.gt(valueToCheck)) {
+        if (getLast? maxValue.lte(valueToCheck): maxValue.lt(valueToCheck)) {
             maxValue = valueToCheck;
             maxIndex = i;
         }

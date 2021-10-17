@@ -17,7 +17,7 @@ export const rangeMinIndexOf  = curry((fromIndex: number, toIndex: number, getLa
     let minValue: Decimal = checkAndInstantiateDecimal(array[fromIndex]);
     for (let i=fromIndex+1; i<=toIndex; i++) {
         const valueToCheck: Decimal = checkAndInstantiateDecimal(array[i]);
-        if (getLast? minValue.lte(valueToCheck): minValue.lt(valueToCheck)) {
+        if (getLast? minValue.gte(valueToCheck): minValue.gt(valueToCheck)) {
             minValue = valueToCheck;
             minIndex = i;
         }

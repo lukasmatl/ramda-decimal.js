@@ -1,5 +1,5 @@
-import {acos} from '../acos';
-import Decimal from "decimal.js";
+import {acos} from '../';
+import Decimal from 'decimal.js';
 
 test('acos 0 to be 1.57', () => {
     Decimal.set({precision: 3})

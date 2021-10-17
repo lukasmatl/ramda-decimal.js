@@ -1,4 +1,4 @@
-import Decimal from "decimal.js";
+import Decimal from 'decimal.js';
 import {curry} from 'ramda';
 
 /**
@@ -6,4 +6,4 @@ import {curry} from 'ramda';
  * @param x
  * @param y
  */
-export const clamp = curry((min: Decimal.Value, max: Decimal.Value, n:Decimal.Value,): Decimal => Decimal.clamp(n, min, max));
+export const clamp = curry((min: Decimal.Value, max: Decimal.Value, n:Decimal.Value): Decimal => Decimal.clamp(n, min, max));

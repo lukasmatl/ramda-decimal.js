@@ -1,6 +1,5 @@
-import Decimal from "decimal.js";
-import {compose, isEmpty, isNil, map, slice} from "ramda";
-import {checkAndInstantiateDecimal} from "../util";
+import Decimal from 'decimal.js';
+import { isEmpty, isNil, slice} from "ramda";
 
 /**
  * Function that finds the min value within defined range in array.
@@ -12,10 +11,7 @@ import {checkAndInstantiateDecimal} from "../util";
 export const rangeMinValue  = (fromIndex: number, toIndex: number, array: Decimal.Value[]): Decimal | null => {
     if (isNil(array) || isEmpty(array) || isNaN(fromIndex) || isNaN(toIndex)) return null;
 
-    const subArray: Decimal[] = compose(
-        map(checkAndInstantiateDecimal),
-        slice(fromIndex, toIndex)
-    )(array);
+    const subArray: Decimal.Value[] = slice(fromIndex, toIndex, array);
 
     return Decimal.min(...subArray);
 }

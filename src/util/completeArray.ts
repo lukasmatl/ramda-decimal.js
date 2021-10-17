@@ -14,5 +14,5 @@ export const completeArray = curry((desiredLength: number, array: Decimal.Value[
         (length: number) => repeat(new Decimal(0), length),
         subtract(desiredLength)
     ),
-    always(array)
+    () => map(checkAndInstantiateDecimal, array)
 )(array.length));

@@ -12,7 +12,7 @@ export const lowest = (length: number, array: Decimal.Value[]): Decimal | null =
 
     const subArray: Decimal[] = compose(
         map(checkAndInstantiateDecimal),
-        slice(array.length-1-length, array.length-1)
+        slice(array.length-length, array.length-1)
     )(array);
 
     return Decimal.min(...subArray);

@@ -11,7 +11,7 @@ export * from './cbrt';
 export * from './ceil';
 export * from './clamp';
 export * from './cos';
-export * from './acosh';
+export * from './cosh';
 export * from './div';
 export * from './exp';
 export * from './floor';

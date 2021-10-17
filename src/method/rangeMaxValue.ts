@@ -1,6 +1,5 @@
 import Decimal from 'decimal.js';
-import {isNil, isEmpty, map, compose, slice} from 'ramda'
-import {checkAndInstantiateDecimal} from "../util";
+import {isNil, isEmpty, slice} from 'ramda'
 
 /**
  * Function that finds the max value within defined range in array.
@@ -11,10 +10,6 @@ import {checkAndInstantiateDecimal} from "../util";
 export const rangeMaxValue  = (fromIndex: number, toIndex: number, array: Decimal.Value[]): Decimal | null => {
     if (isNil(array) || isEmpty(array) || isNaN(fromIndex) || isNaN(toIndex)) return null;
 
-    const subArray: Decimal[] = compose(
-        map(checkAndInstantiateDecimal),
-        slice(fromIndex, toIndex)
-    )(array);
-
+    const subArray: Decimal.Value[] = slice(fromIndex, toIndex, array);
     return Decimal.max(...subArray);
 }

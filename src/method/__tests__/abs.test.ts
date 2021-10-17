@@ -1,4 +1,4 @@
-import {abs} from '../abs';
+import {abs} from '../';
 
 test('abs -2 to be 2', () => {
     expect(abs(-2).toString()).toBe('2');
