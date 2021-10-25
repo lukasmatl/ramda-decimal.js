@@ -16,8 +16,9 @@ export const crossunder = (x: Decimal.Value[], y: Decimal.Value[]): boolean[] | 
 
     const resultArray: boolean[] = [];
 
+    resultArray.push(false);
     for (let i = 1; i < maxLength; i++) {
-        resultArray.push(xArray[i-1].lte(yArray[i-1]) && xArray[i].gt(yArray[i]));
+        resultArray.push(xArray[i-1].gte(yArray[i-1]) && xArray[i].lt(yArray[i]));
     }
 
     return resultArray;
