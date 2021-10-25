@@ -1,6 +1,6 @@
 {
   "name": "ramda-decimal.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Decimal.js ramda wrapper",
   "main": "./lib/index.js",
   "scripts": {

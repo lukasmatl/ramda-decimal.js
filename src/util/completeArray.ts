@@ -1,5 +1,5 @@
 import Decimal from 'decimal.js';
-import {curry, lt, always, compose, repeat, concat, ifElse, map, subtract} from 'ramda';
+import {curry, lt, compose, repeat, concat, ifElse, map, subtract} from 'ramda';
 import {checkAndInstantiateDecimal} from "./checkAndInstantiateDecimal";
 
 /**
