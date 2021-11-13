@@ -1,12 +1,11 @@
 {
   "name": "ramda-decimal.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Decimal.js ramda wrapper",
   "main": "./lib/index.js",
   "scripts": {
-    "tslint:test": "tslint --test",
-    "build": "tsc",
-    "test": "node ./index.js"
+    "test": "jest",
+    "build": "tsc"
   },
   "author": "Lukas Matl",
   "license": "ISC",

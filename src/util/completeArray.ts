@@ -1,5 +1,5 @@
 import Decimal from 'decimal.js';
-import {curry, lt, compose, repeat, concat, ifElse, map, subtract} from 'ramda';
+import {curry, gt, compose, repeat, concat, ifElse, map, subtract} from 'ramda';
 import {checkAndInstantiateDecimal} from "./checkAndInstantiateDecimal";
 
 /**
@@ -8,7 +8,7 @@ import {checkAndInstantiateDecimal} from "./checkAndInstantiateDecimal";
  * @param array
  */
 export const completeArray = curry((desiredLength: number, array: Decimal.Value[]): Decimal.Value[] => ifElse(
-    lt(desiredLength),
+    gt(desiredLength),
     compose(
         (zeroArray: Decimal[]) => concat(zeroArray, map(checkAndInstantiateDecimal, array)),
         (length: number) => repeat(new Decimal(0), length),
